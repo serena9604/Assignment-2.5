@@ -15,16 +15,18 @@ public class Dice
             int diceNum = sc.nextInt();
             System.out.println("How many sides do these dice have?");
             int sideNum = sc.nextInt();
-            System.out.print("You rolled");
+            System.out.print("You rolled ");
+            total = 0;
             for (int rollNum = 0; rollNum < diceNum; rollNum ++) {
-                rollDie(sideNum);
+                roll = rollDie(sideNum);
                 total = total + roll;
-                System.out.println("Total: " + total);
+                System.out.print(roll + " ");
             }
+            System.out.println("Total: " + total);
             System.out.println("Roll again? [y/n]");
             ans = sc.next();
             if ("n".equals(ans)) {
-                System.out.print("Goodbye");
+                System.out.print("Goodbye!");
             }
         }
     }
